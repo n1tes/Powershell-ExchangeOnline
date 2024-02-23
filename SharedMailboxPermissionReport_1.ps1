@@ -1,0 +1,2 @@
+﻿import-csv D:\ScriptOutput\SharedMailbox_WL_Permission_210323_506PM.csv |
+    select *, @{n="SharedMailbox"; e={(Get-Recipient $_.identity).DisplayName}} | Export-Csv D:\scriptoutput\New_SharedMailboxPermission_WL.csv
